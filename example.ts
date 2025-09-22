@@ -18,8 +18,8 @@ async function realizarPago() {
     });
 
     // 2.- paso obtenemos los nombres de los wallet del emisor y receptor
-    const reciverWalletName = "arturo";
-    const senderWalletName = "456f9935";
+    const reciverWalletName = "ulises";
+    const senderWalletName = "base";
     // 3.- paso obtenermos las wallets de los mismos
     await paymentService.addSenderWalletAddress(senderWalletName);
     await paymentService.addReciverWalletAddress(reciverWalletName);
@@ -84,7 +84,7 @@ async function getOutGoingTransactions(){
 //     process.exit(1);
 // });
 
-getOutGoingTransactions().catch(error => {
+realizarPago().catch(error => {
     console.error("Ocurrió un error:", error);
     process.exit(1);
 });
