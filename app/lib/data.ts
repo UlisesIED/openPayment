@@ -6,8 +6,8 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
-} from './definitions';
-import { formatCurrency } from './utils';
+} from './interfaces/definitions';
+import { formatCurrency } from './utils/utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
